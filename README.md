@@ -126,7 +126,8 @@ El script facilita la sincronización automática de archivos o directorios entr
 
 **Ejemplo de Programación Automática:**
 
-- Ejemplo de línea para programar la sincronización diaria a las 2 a.m. en el crontab:
+- Ejemplo de línea para programar la sincronización diaria a las 2:00 AM en el crontab:
+  
   ```
   0 2 * * *  /ruta/a/tu/script.sh "example"
   ```
