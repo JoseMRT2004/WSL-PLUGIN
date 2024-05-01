@@ -133,3 +133,5 @@ El script facilita la sincronización automática de archivos o directorios entr
   ```
 
 _Reemplaza "/ruta/a/tu/script.sh" con la ruta absoluta de tu script_
+
+### _Aun estamos trabajando.........._ 
