@@ -6,7 +6,7 @@
 # No olvides darle una estrella si te sirvio.
 ```
 
-- ### Tambien Puedes usarlo para practicar Git y Githup
+- ### Tambien Puedes usarlo para practicar Git y Github
 
 ## Pasos a seguir
 
