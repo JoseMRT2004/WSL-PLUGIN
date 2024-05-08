@@ -1,5 +1,5 @@
-export windowsuser = 
-export wsluser =
+export windowsuser= 
+export wsluser=
 
 vimt() {
     if [ -z "$1" ]; then
