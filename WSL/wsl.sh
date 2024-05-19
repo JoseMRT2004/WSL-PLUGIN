@@ -1,9 +1,12 @@
 export windowsuser= 
 export wsluser=
 
+COLOR_ERROR="\033[31m"
+COLOR_RESET="\033[0m"
+
 vimt() {
     if [ -z "$1" ]; then
-        echo -e "\033[31mError: Se requiere especificar un archivo o directorio.\033[0m"
+        echo -e "${COLOR_ERROR}Error: Se requiere especificar un archivo o directorio.${COLOR_RESET}"
         return 1
     fi
 
@@ -12,14 +15,14 @@ vimt() {
     if [ -e "$target" ]; then
         vim "$target"
     else
-        echo -e "\033[31mError: El archivo o directorio \"$1\" no existe en /mnt/c/Users/$windowsUser/.\033[0m"
+        echo -e "${COLOR_ERROR}Error: El archivo o directorio \"$1\" no existe en /mnt/c/Users/$windowsUser/.${COLOR_RESET}"
         return 1
     fi
 }
 
 touchw() {
     if [ $# -lt 1 ]; then
-        echo -e "\033[31mError: Se requiere especificar al menos un archivo.\033[0m"
+        echo -e "${COLOR_ERROR}Error: Se requiere especificar al menos un archivo.${COLOR_RESET}"
         return 1
     fi
 
@@ -28,7 +31,7 @@ touchw() {
 
 cpw() {
     if [ $# -lt 2 ]; then
-        echo -e "\033[31mError: Uso incorrecto. Se requiere especificar un archivo o directorio y un usuario de WSL.\033[0m"
+        echo -e "${COLOR_ERROR}Error: Uso incorrecto. Se requiere especificar un archivo o directorio y un usuario de WSL.${COLOR_RESET}"
         return 1
     fi
 
@@ -49,7 +52,7 @@ rmall() {
 
 lsdw() {
     if [ -z "$windowsuser" ]; then
-        echo -e "\033[31mError: Se requiere especificar el usuario.\033[0m"
+        echo -e "${COLOR_ERROR}Error: Se requiere especificar el usuario.\033[0m"
         return 1
     fi
 
