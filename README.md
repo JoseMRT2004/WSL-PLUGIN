@@ -1,118 +1,19 @@
-### Guía de Uso para Comentarios en el Código
 
-#### Función `vimt()`
 
-```bash
-# Descripción:
-# Esta función permite abrir un archivo o directorio ubicado en la ruta /mnt/c/Users/username/ utilizando Vim.
+# Plugin de Integración WSL-Windows
 
-# Uso:
-# vimt <archivo_o_directorio>
+## Descripción
 
-# Ejemplo:
-# vimt example.txt
-```
+Este proyecto tiene como objetivo crear un plugin para simplificar el uso de archivos y varias operaciones entre el Subsistema de Windows para Linux (WSL) y Windows. El objetivo principal es mejorar la experiencia del usuario proporcionando una integración fluida directamente desde la shell de bash.
 
-#### Función `touchw()`
+## Características
 
-```bash
-# Descripción:
-# Esta función crea uno o más archivos en la ruta /mnt/c/Users/username/.
+- **Gestión de Archivos**: Transferencia y gestión sencilla de archivos entre WSL y Windows.
+- **Integración de Comandos**: Ejecutar comandos de Windows desde la bash de WSL y viceversa.
+- **Scripts Automatizados**: Automatizar tareas repetitivas entre los entornos de WSL y Windows.
+- **Sincronización de Entornos**: Sincronizar variables de entorno y rutas entre WSL y Windows.
 
-# Uso:
-# touchw <archivo1> [archivo2 ...]
-
-# Ejemplo:
-# touchw file1.txt file2.txt
-```
-
-#### Función `cpw()`
-
-```bash
-# Descripción:
-# Esta función copia un archivo o directorio desde la ruta /mnt/c/Users/username/ a la ruta /home/usuario_en_WSL/.
-
-# Uso:
-# cpw <archivo_o_directorio> <usuario_en_WSL>
-
-# Ejemplo:
-# cpw example.txt user1
-```
-
-#### Función `rmall()`
-
-```bash
-# Descripción:
-# Esta función elimina de forma recursiva un archivo o directorio ubicado en /mnt/c/Users/username/.
-
-# Uso:
-# rmall <archivo_o_directorio>
-
-# Ejemplo:
-# rmall directory
-```
-
-#### Función `lsdw()`
-
-```bash
-# Descripción:
-# Esta función lista todos los archivos y directorios en /mnt/c/Users/username/.
-
-# Uso:
-# lsdw
-
-# Ejemplo:
-# lsdw
-```
-
-#### Alias `vimwd`
-
-```bash
-# Descripción:
-# Este alias abre Vim en la ruta /mnt/c/Users/username/.
-
-# Uso:
-# vimwd
-
-# Ejemplo:
-# vimwd
-```
-
-#### Alias `mkdir`
-
-```bash
-# Descripción:
-# Este alias crea un directorio en la ruta /mnt/c/Users/username/.
-
-# Uso:
-# mkdir <nombre_directorio>
-
-# Ejemplo:
-# mkdir new_directory
-```
-
-#### Alias `rmdir`
-
-```bash
-# Descripción:
-# Este alias elimina un directorio de manera interactiva en la ruta /mnt/c/Users/username/.
-
-# Uso:
-# rmdir <nombre_directorio>
-
-# Ejemplo:
-# rmdir old_directory
-```
-
-<hr>
-
-### Resumen del Script de Sincronización Automática entre Windows y WSL (Sincwsl)
-
-**Propósito del Script:**
-
-El script facilita la sincronización automática de archivos o directorios entre Windows y WSL (Windows Subsystem for Linux).
-
-**Pasos para Utilizar el Script:**
+## Usar el script de Sincronizacion de archivos 
 
 - Asegurarse de tener los permisos necesarios en ambos sistemas.
 - Colocar el script en una ubicación accesible desde ambos entornos.
