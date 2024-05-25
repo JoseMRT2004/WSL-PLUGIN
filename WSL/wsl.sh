@@ -61,6 +61,6 @@ lsdw() {
     ls -a "/mnt/c/Users/$windowsuser"
 }
 
-alias vimwd='vim /mnt/c/Users/$windowsuser/'
-alias mkdir='mkdir /mnt/c/Users/$windowsuser/'
+alias nvimwd='nvim /mnt/c/Users/$windowsuser/'
+alias mkdirwd='mkdir /mnt/c/Users/$windowsuser/'
 alias rmdir='rm -i /mnt/c/Users/$windowsuser/'
