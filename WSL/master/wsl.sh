@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export windowsuser=maria 
-export wsluser=m4riano
-
 COLOR_ERROR="\033[31m"
 COLOR_RESET="\033[0m"
 
