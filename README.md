@@ -35,4 +35,4 @@ Este proyecto tiene como objetivo crear un plugin para simplificar el uso de arc
 
 _Reemplaza "/ruta/a/tu/script.sh" con la ruta absoluta de tu script_
 
-### _Aun estamos trabajando.........._ 
+### _Aun estoy trabajando.........._ 
