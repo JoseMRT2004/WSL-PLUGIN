@@ -1,7 +1,6 @@
 # Guía para contribuir al proyecto
 
 **WSL-PLUGIN** se ha creado no solo para eficientizar el trabajo de los desarrolladores que utilizan WSL, sino también para practicar los conocimientos que voy adquiridos en la universidad o en internet. Todos los aportes, sin importar su magnitud, serán bienvenidos después de ser depurados.
-# Guía para contribuir con los repositorios de github de 
 ## Pasos para Contribuir Exitosamente:
 
 1. Haremos un fork de este repositorio (Hacemos click en el boton que dice fork) y clickeamos en _fork_ 
