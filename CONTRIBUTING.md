@@ -1,44 +1,62 @@
 # Guía para contribuir al proyecto
 
 **WSL-PLUGIN** se ha creado no solo para eficientizar el trabajo de los desarrolladores que utilizan WSL, sino también para practicar los conocimientos que voy adquiridos en la universidad o en internet. Todos los aportes, sin importar su magnitud, serán bienvenidos después de ser depurados.
+# Guía para contribuir con los repositorios de github de *Security-Environment*
 
-```bash
-# No olvides darle una estrella si te sirvio.
+¡Anímate a contribuir con entusiasmo! Asegúrate de tener una cuenta en GitHub y consulta la guía para cualquier pregunta que tengas.
+
+## Pasos para Contribuir Exitosamente:
+
+1. Haremos un fork de este repositorio (Hacemos click en el boton que dice fork) y clickeamos en _fork_ 
+
+2. Clonamos este repositorio fork en nuestra cuenta local
+
+```$ git clone git@github.com:hschmitt/devfestlima-wp-theme.git```
+
+3. Creamos un branch donde agregaremos nuestro nuevo feature.
+
+```$ git checkout -b feature-base-files```
+
+4. Agregamos o editamos los archivos necesarios para nuestro cambios.
+
+5. Seguimos nuestros cambios git add . 
+
+6. Hacemos commit de nuestros cambios con algun mensaje descriptivo pero corto en la primera linea, desde la segunda línea en adelante podemos re-escribir el Corán si deseamos. Sumas puntos si sigues esta sintaxi 
+
+```
+feat: add new search feature
+^--^  ^--------------------^
+│     │
+│     └--> # Descripción de los cambios
+│
+└──------> # Tipo del cambio
+```
+```
+feat(backend): add filter for cars
+fix(web): remove wrong color
+
 ```
 
-- ### Tambien Puedes usarlo para practicar Git y Github
 
-## Pasos a seguir
+```$ git commit -m 'Agregando archivos base para el tema de wordpress'```
 
-- Haz un fork del repositorio.
 
-- Clonar el repsitorio en tu maquina local.
+*⚠️ Repetimos los pasos cada vez que agreguemos más cambios*
 
-```bash
-git clone <URL>
-```
+```$ git commit -m 'Agregando detalles de tema y licencia'```
 
-- Crear una rama con tu nombre de usuario.
+```$ git commit -m 'Agregando screenshot al tema'```
 
-```
-git switch -c JoseMRT2004
-```
+7. Una vez que estemos contentos con nuestros cambios, realizamos un push al repositorio remoto.
 
-- Realizar tus aportes.
+```$ git push origin feature-base-files:feature-base-files```
 
-### Como hacer el commit:
+Nota: 
 
-_Ponle por titulo lo sigiente dependiendo tu aporte seguido de dos puntos y la ubicacion del archivo. Si los cambios son mas de uno pues los separas con `/`_
+Nuestro push esta en nuestro repositorio, se crea un nuevo branch en el repositorio remoto con nuestros cambios 
 
-- add:
-- remove:
-- changes:
-- create:
-- error:
-- bug:
+8.- Hacemos un pull request. Para esto, en la Imagen 4, en el menú superior derecho, vemos un boton que dice _Pull Request_, le hacemos clic y se nos mostrará una pantalla. En ella escribiremos qué feature(s) se agregan con nuestros cambios y por qué debería ser aceptado.
 
-```bash
-git commit -m "create:/WSL-PLUGIN/CONTRIBUTING.md" -m "mensaje"
-```
+![Pull Request](image.png)
 
-**⚠️No olvides seguir tus cambios `git add .`**
+Una vez hecho el merge en el repositorio original, github te envía una notificación, y podremas ver tus cambios en el repositorio principal.
