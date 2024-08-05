@@ -1,0 +1,1 @@
+ # crear un escrito que crea una versión local del proyecto en la computadora de usuario y agregue todos los datos para que funcione el plugin_
