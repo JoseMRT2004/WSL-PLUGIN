@@ -35,7 +35,7 @@ cpw() {
     fi
 
     local source="/mnt/c/Users/$windowsuser/$1"
-    local destination="/home/$wsluser/"
+    local destination="/home/$USER/"
 
     cp -rfu "$source" "$destination"
 }

@@ -9,5 +9,5 @@ Sincwsl() {
     return 1
   fi
 
-  cp -rafpu  "/mnt/c/Users/$windowsuser/$1" "/home/$wsluser/$1"
+  cp -rafpu  "/mnt/c/Users/$windowsuser/$1" "/home/$USER/$1"
 }
