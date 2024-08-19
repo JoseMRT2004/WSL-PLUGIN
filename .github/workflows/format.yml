@@ -1,33 +1,42 @@
-name: Format Scripts Bash
+name: Format Code
 
 on:
-  pull_request:
-    branches:
-      - main 
   push:
     branches:
-      - main 
+      - main
 
 jobs:
-  beautify:
-    runs-on: "ubuntu"
-    
+  format:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          
-      - name: Run beautysh
-        uses: illvart/beautysh-action@latest
-        with:
-          args: '*.sh --indent-size 4'
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Set up Bash environment
+        run: sudo apt-get install -y bash
+
+      - name: Install shfmt
+        run: |
+          curl -LO https://github.com/mvdan/sh/releases/download/v3.5.1/shfmt_v3.5.1_linux_amd64.tar.gz
+          tar -xzf shfmt_v3.5.1_linux_amd64.tar.gz
+          sudo mv shfmt /usr/local/bin/
+
+      - name: Format Bash scripts
+        run: find . -name "*.sh" -exec shfmt -w {} \;
+
+      - name: Create a new branch for the changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git checkout -b format-code
+          git add .
+          git commit -m "Format code with shfmt" || echo "No changes to commit"
+          git push origin format-code
+
+      - name: Create a Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          commit_message: '[auto-Format]: apply beautysh changes'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
+          title: "Format code with shfmt"
+          body: "This PR formats the code using shfmt."
+          base: main
+          branch: format-code
