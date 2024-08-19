@@ -10,7 +10,7 @@ on:
 
 jobs:
   beautify:
-    runs-on: ubuntu
+    runs-on: "ubuntu"
     
     steps:
       - name: Checkout
