@@ -1,33 +1,39 @@
 name: Format Scripts Bash
 
 on:
-  pull_request:
-    branches:
-      - main 
   push:
     branches:
-      - main 
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   beautify:
-    runs-on: "ubuntu"
-    
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          
+
       - name: Run beautysh
+        id: format
         uses: illvart/beautysh-action@latest
         with:
           args: '*.sh --indent-size 4'
+        
+      - name: Check if changes were made
+        id: check-changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+            exit 1
+          fi
 
       - name: Commit changes
+        if: steps.check-changes.outcome == 'success'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: '[auto-Format]: apply beautysh changes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
