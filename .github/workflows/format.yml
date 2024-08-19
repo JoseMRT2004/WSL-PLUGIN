@@ -1,0 +1,33 @@
+name: Format Scripts Bash
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  beautify:
+    runs-on: "ubuntu"
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          
+      - name: Run beautysh
+        uses: illvart/beautysh-action@latest
+        with:
+          args: '*.sh --indent-size 4'
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '[auto-Format]: apply beautysh changes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
