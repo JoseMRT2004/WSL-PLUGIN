@@ -10,23 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout del repositorio
-      uses: actions/checkout@v4
-
-    - name: Instalar dependencias
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y poetry
-        git clone https://github.com/lovesegfault/beautysh
-        cd beautysh
-        poetry install
-
-    - name: Ejecutar beautysh para formatear archivos .sh
-      uses: illvart/beautysh-action@latest
-      with:
-        args: "--check --in-place '**/*.sh'"  # Revisa y formatea archivos .sh en el repositorio
-
   label:
     runs-on: ubuntu-latest
     steps:
