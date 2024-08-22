@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  label:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout del repositorio para etiquetado
+      uses: actions/checkout@v4
+
+    - name: Aplicar etiquetas automáticas
+      uses: actions/labeler@v4
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
