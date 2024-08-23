@@ -25,9 +25,5 @@ Este proyecto tiene como objetivo crear un plugin para simplificar el uso de arc
 - Para sincronizar un archivo como 'documento.txt', se llama a la función `Sincwsl()` desde otro script o desde la terminal.
 - Para programar la sincronización automática en el crontab, se agrega la función al cronjob con la frecuencia deseada.
 
-
-<details>
-<summary><h2>Mas informacion ⤵️</h2></summary>
-  
   
 ### _Aun estoy trabajando.........._ 
