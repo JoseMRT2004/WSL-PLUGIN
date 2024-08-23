@@ -1,9 +1,18 @@
-#!/bin/bash
+# Manipular archivos de windows desde WSL 
 
+alias mvwd='mv $1 /mnt/c/Users/$windowsuser/'
+alias mvfromwd='mv /mnt/c/Users/$windowsuser/$1 $2'
+alias nvimwd='nvim /mnt/c/Users/$windowsuser/'
+alias mkdirwd='mkdir /mnt/c/Users/$windowsuser/'
+alias rmdir='rm -i /mnt/c/Users/$windowsuser/'
+alias catwd='cat /mnt/c/Users/$windowsuser/$1'
 
-windows_username=$(wine cmd /c echo %USERNAME%)
-WINDOWS_USER_PATH="/mnt/c/Users/$windows_username"
+# Comprimir o descomprimir archvos
 
+alias unzipwd='unzip $1 -d /mnt/c/Users/$windowsuser/$2'
+alias tarxwd='tar -xvf $1 -C /mnt/c/Users/$windowsuser/$2'
+alias zipwd='zip -r /mnt/c/Users/$windowsuser/$1 $2'
+alias tarcwd='tar -cvf /mnt/c/Users/$windowsuser/$1 $2'
 
 # Función para abrir un archivo o directorio en Vim
 vimt() {
@@ -79,4 +88,3 @@ du-wd() {
         echo "${ERROR_COLOR}Error: El directorio '$dir' no existe.${RESET}"
     fi
 }
-
