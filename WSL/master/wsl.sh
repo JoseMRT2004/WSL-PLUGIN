@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Definición de colores para mensajes de error
-COLOR_ERROR="\033[31m"  
-COLOR_RESET="\033[0m"
+
 windows_username=$(wine cmd /c echo %USERNAME%)
 WINDOWS_USER_PATH="/mnt/c/Users/$windows_username"
 
@@ -10,7 +8,7 @@ WINDOWS_USER_PATH="/mnt/c/Users/$windows_username"
 # Función para abrir un archivo o directorio en Vim
 vimt() {
     if [ -z "$1" ]; then
-        echo -e "${COLOR_ERROR}Error: Se requiere especificar un archivo o directorio.${COLOR_RESET}"
+        echo -e "${ERROR_COLOR}Error: Se requiere especificar un archivo o directorio.${RESET}"
         return 1
     fi
 
@@ -19,14 +17,14 @@ vimt() {
     if [ -e "$target" ]; then
         vim "$target"  # Abre el archivo en Vim
     else
-        echo -e "${COLOR_ERROR}Error: El archivo o directorio \"$1\" no existe en /mnt/c/Users//.${COLOR_RESET}"
+        echo -e "${ERROR_COLOR}Error: El archivo o directorio \"$1\" no existe en /mnt/c/Users//.${RESET}"
         return 1
     fi
 }
 
 touchw() {
     if [ $# -lt 1 ]; then
-        echo -e "${COLOR_ERROR}Error: Se requiere especificar al menos un archivo.${COLOR_RESET}"
+        echo -e "${ERROR_COLOR}Error: Se requiere especificar al menos un archivo.${RESET}"
         return 1
     fi
 
@@ -36,7 +34,7 @@ touchw() {
 # Función para copiar archivos del sistema de archivos de Windows a WSL
 cpw() {
     if [ $# -lt 2 ]; then
-        echo -e "${COLOR_ERROR}Error: Uso incorrecto. Se requiere especificar un archivo o directorio y un usuario de WSL.${COLOR_RESET}"
+        echo -e "${ERROR_COLOR}Error: Uso incorrecto. Se requiere especificar un archivo o directorio y un usuario de WSL.${RESET}"
         return 1
     fi
 
@@ -48,7 +46,7 @@ cpw() {
 
 rmall() {
     if [ -z "$1" ]; then
-        echo -e "\033[31mError: Se requiere especificar un archivo o directorio.\033[31m"
+        echo -e ${ERROR_COLOR}Error: Se requiere especificar un archivo o directorio.${RESET}
         return 1
     fi
 
@@ -57,7 +55,7 @@ rmall() {
 
 lsdw() {
     if [ -z "$windows_username" ]; then
-        echo -e "${COLOR_ERROR}Error: Se requiere especificar el usuario.\033[0m"
+        echo -e "${ERROR_COLOR}Error: Se requiere especificar el usuario.${RESET}"
         return 1
     fi
 
@@ -66,18 +64,19 @@ lsdw() {
 
 du-wd() {
     if [ -z "$1" ]; then
-        # No se proporciona argumento, usa el directorio predeterminado
-        local dir="/mnt/c/Users/$windows_username/"
+                          # No se proporciona argumento, usa el directorio predeterminado
+        echo -e "${ERROR_COLOR}Error: Se requiere especificar un archivo o directorio.${RESET}"
+        return 1
     else
-        # Se proporciona argumento, usa el directorio especificado
+                          # Se proporciona argumento, usa el directorio especificado
         local dir="/mnt/c/Users/$windows_username/$1"
     fi
     
-    # Verifica si el directorio existe antes de ejecutar `du`
+                          # Verifica si el directorio existe antes de ejecutar `du`
     if [ -d "$dir" ]; then
         du -sh "$dir" # Mide y muestra el tamaño del directorio
     else
-        echo "Error: El directorio '$dir' no existe."
+        echo "${ERROR_COLOR}Error: El directorio '$dir' no existe.${RESET}"
     fi
 }
 
