@@ -13,7 +13,7 @@ Este proyecto tiene como objetivo crear un plugin para simplificar el uso de arc
 - **Scripts Automatizados**: Automatizar tareas repetitivas entre los entornos de WSL y Windows.
 - **Sincronización de Entornos**: Sincronizar variables de entorno y rutas entre WSL y Windows.
 
-## Usar el script de Sincronizacion de archivos 
+<!--  ## Usar el script de Sincronizacion de archivos 
 
 - Asegurarse de tener los permisos necesarios en ambos sistemas.
 - Colocar el script en una ubicación accesible desde ambos entornos.
@@ -24,6 +24,4 @@ Este proyecto tiene como objetivo crear un plugin para simplificar el uso de arc
 
 - Para sincronizar un archivo como 'documento.txt', se llama a la función `Sincwsl()` desde otro script o desde la terminal.
 - Para programar la sincronización automática en el crontab, se agrega la función al cronjob con la frecuencia deseada.
-
-  
-### _Aun estoy trabajando.........._ 
+### _Aun estoy trabajando.......... -->
