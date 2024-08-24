@@ -48,4 +48,15 @@ INFO_COLOR='\033[1;36m'     # Cian brillante
 DEBUG_COLOR='\033[0;35m'    # Magenta
 
 # Reset
-RESET='\033[
+RESET='\033['
+
+# Mensajes
+ERROR_FILE_NOT_SPECIFIED="${WARN_COLOR}Error: Se requiere especificar un archivo o directorio.${RESET}"
+ERROR_FILE_NOT_EXIST="${ERROR_COLOR}Error: El archivo o directorio \"$1\" no existe en /mnt/c/Users/$windows_username/.${RESET}"
+ERROR_INSUFFICIENT_ARGS="${WARN_COLOR}Error: Se requiere especificar al menos un archivo.${RESET}"
+ERROR_INCORRECT_USAGE="${ERROR_COLOR}Error: Uso incorrecto. Se requiere especificar un archivo o directorio y un usuario de WSL.${RESET}"        
+ERROR_NO_USER="${ERROR_COLOR}Error: Se requiere especificar el usuario.${RESET}"
+SUCCESS_MSG="${SUCCESS_COLOR}Operation successful.${RESET}"
+ERROR_MSG="${ERROR_COLOR}Operation failed.${RESET}"
+
+

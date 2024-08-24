@@ -1,11 +1,11 @@
 Sincwsl() {
   if [ -z "$1" ]; then
-    echo -e "\033[31m\nError: Se requiere especificar un archivo o directorio\033[0m"
+    echo -e "${ERROR_FILE_NOT_SPECIFIED}"
     return 1
   fi
 
   if [ -e "$1" ]; then
-    echo -e "\033[31mError: \"$1\" NO EXISTE EN WINDOWS O EN WSL. VERIFICA EL NOMBRE.\033[0m"
+    echo -e "${ERROR_FILE_NOT_EXIST}"
     return 1
   fi
 
