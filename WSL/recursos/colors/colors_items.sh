@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Colores de texto estándar
 BLACK='\033[0;30m'
@@ -48,7 +47,7 @@ INFO_COLOR='\033[1;36m'     # Cian brillante
 DEBUG_COLOR='\033[0;35m'    # Magenta
 
 # Reset
-RESET='\033['
+RESET='\033[m'
 
 # Mensajes
 ERROR_FILE_NOT_SPECIFIED="${WARN_COLOR}Error: Se requiere especificar un archivo o directorio.${RESET}"
@@ -58,5 +57,10 @@ ERROR_INCORRECT_USAGE="${ERROR_COLOR}Error: Uso incorrecto. Se requiere especifi
 ERROR_NO_USER="${ERROR_COLOR}Error: Se requiere especificar el usuario.${RESET}"
 SUCCESS_MSG="${SUCCESS_COLOR}Operation successful.${RESET}"
 ERROR_MSG="${ERROR_COLOR}Operation failed.${RESET}"
-
+ERROR_INVALID_CRON_SCHEDULE="${WARN_COLOR}El intervalo de sincronización ingresado no es válido.\n\Asegúrate de usar el formato cron correcto (e.g., '*/5 * * * *').${RESET}"
+EJP_CRON="0 3 * * *\t\t# A las 3:00 AM cada día\n\
+30 18 * * *\t# A las 6:30 PM cada día\n\
+0 12 * * *\t\t# A las 12:00 PM (mediodía) cada día\n\
+0 0 * * *\t\t# A la medianoche cada día\n\
+0 8 * * *\t\t# A las 8:00 AM cada día"
 

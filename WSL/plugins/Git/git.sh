@@ -1,7 +1,3 @@
-#! bash oh-my-bash.module
-#
-# Functions
-#
 
 # The name of the current branch
 # Back-compatibility wrapper for when this function was defined here in
