@@ -1,58 +1,53 @@
-# Guía para contribuir al proyecto
+# 🌟 Guía para Contribuir al Proyecto: **WSL-PLUGIN**
 
-**WSL-PLUGIN** se ha creado no solo para eficientizar el trabajo de los desarrolladores que utilizan WSL, sino también para practicar los conocimientos que voy adquiridos en la universidad o en internet. Todos los aportes, sin importar su magnitud, serán bienvenidos después de ser depurados.
-## Pasos para Contribuir Exitosamente:
+**WSL-PLUGIN** se ha creado para eficientizar el trabajo de los desarrolladores que utilizan WSL y practicar conocimientos adquiridos. ¡Todos los aportes serán bienvenidos! 🙌
 
-1. Haremos un fork de este repositorio *(Hacemos click en el boton que dice fork)* y clickeamos en _fork_ 
+## 🚀 Pasos para Contribuir Exitosamente:
 
-2. Clonamos este repositorio fork en nuestra cuenta local
+**Hacer un Fork**:  
+   Haz clic en el botón que dice "Fork". 🍴
 
-```$ git clone git@github.com:hschmitt/devfestlima-wp-theme.git```
+**Clonar el Repositorio**:  
+   Clonamos el repositorio fork en nuestra cuenta local.
 
-3. Creamos un branch donde agregaremos nuestro nuevo feature.
+   ```bash
+   $ git clone git@github.com:hschmitt/devfestlima-wp-theme.git
+   ```
 
-```$ git checkout -b feature-base-files```
+**Crear un Branch**:  
+   Creamos un branch para el nuevo feature.
 
-4. Agregamos o editamos los archivos necesarios para nuestro cambios.
+   ```bash
+   $ git checkout -b feature-base-files
+   ```
 
-5. Seguimos nuestros cambios git add . 
+**Agregar o Editar Archivos**:  
+ Realiza los cambios necesarios en los archivos. 📝
 
-6. Hacemos commit de nuestros cambios con algun mensaje descriptivo pero corto en la primera linea, desde la segunda línea en adelante podemos re-escribir el Corán si deseamos. Sumas puntos si sigues esta sintaxi 
+**Seguir los Cambios**:  
+Añadimos los cambios realizados.
 
-```
-feat: add new search feature
-^--^  ^--------------------^
-│     │
-│     └--> # Descripción de los cambios
-│
-└──------> # Tipo del cambio
-```
-```
-feat(backend): add filter for cars
-fix(web): remove wrong color
+   ```bash
+   $ git add .
+   ```
 
-```
+**Hacer Commit**:  
+ Realizamos un commit con un mensaje corto y descriptivo.
 
+   ```bash
+   $ git commit -m 'Agregando archivos base para el tema de WordPress'
+   ```
 
-```$ git commit -m 'Agregando archivos base para el tema de wordpress'```
+**Push al Repositorio Remoto**:  
+ Realiza un push al repositorio remoto.
 
+   ```bash
+   $ git push origin feature-base-files:feature-base-files
+   ```
 
-*⚠️ Repetimos los pasos cada vez que agreguemos más cambios*
+**Hacer un Pull Request**:  
+ Haz clic en _Pull Request_ en el menú superior derecho y describe qué feature(s) se agregan con tus cambios. 📨
 
-```$ git commit -m 'Agregando detalles de tema y licencia'```
+   ![Pull Request](C:\Users\Maria\OneDrive\Escritorio\Imágenes\Capturas de pantalla\pullrequest.png)
 
-```$ git commit -m 'Agregando screenshot al tema'```
-
-7. Una vez que estemos contentos con nuestros cambios, realizamos un push al repositorio remoto.
-
-```$ git push origin feature-base-files:feature-base-files```
-
-Nota: 
-
-Nuestro push esta en nuestro repositorio, se crea un nuevo branch en el repositorio remoto con nuestros cambios 
-
-8.- Hacemos un pull request. Para esto, en la Imagen 4, en el menú superior derecho, vemos un boton que dice _Pull Request_, le hacemos clic y se nos mostrará una pantalla. En ella escribiremos qué feature(s) se agregan con nuestros cambios y por qué debería ser aceptado.
-
-![Pull Request](image.png)
-
-Una vez hecho el merge en el repositorio original, github te envía una notificación, y podremas ver tus cambios en el repositorio principal.
+### 🐛 Si eres nuevo en el proyecto, busca issues con la etiqueta ![**good first issue**](https://goodfirstissue.dev/). Estas tareas son ideales para comenzar a contribuir!
