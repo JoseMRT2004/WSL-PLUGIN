@@ -48,6 +48,6 @@ Añadimos los cambios realizados.
 **Hacer un Pull Request**:  
  Haz clic en _Pull Request_ en el menú superior derecho y describe qué feature(s) se agregan con tus cambios. 📨
 
-   ![Pull Request](C:\Users\Maria\OneDrive\Escritorio\Imágenes\Capturas de pantalla\pullrequest.png)
+![Pull Request Referens](https://i.ytimg.com/vi/rgbCcBNZcdQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXFEKoemV249J8Dya6ap35q-qrEg)
 
-### 🐛 Si eres nuevo en el proyecto, busca issues con la etiqueta ![**good first issue**](https://goodfirstissue.dev/). Estas tareas son ideales para comenzar a contribuir!
+### 🐛 Si eres nuevo en el proyecto, busca issues con la etiqueta [**good first issue**](https://goodfirstissue.dev/). Estas tareas son ideales para comenzar a contribuir!
