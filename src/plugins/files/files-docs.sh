@@ -15,9 +15,8 @@ alias tarxwd='tar -xvf $1 -C /mnt/c/Users/$windowsuser/$2'
 alias zipwd='zip -r /mnt/c/Users/$windowsuser/$1 $2'
 alias tarcwd='tar -cvf /mnt/c/Users/$windowsuser/$1 $2'
 
-# Función para abrir un archivo o directorio en Vim
 
-vimt() {
+vimt() {   # Función para abrir un archivo o directorio en Vim
     if [ -z "$1" ]; then
         echo -e "${ERROR_FILE_NOT_SPECIFIED}"
         return 1
@@ -42,9 +41,8 @@ touchw() {
     touch "/mnt/c/Users/$windows_username/$@"
 }
 
-# Función para copiar archivos del sistema de archivos de Windows a WSL
 
-cpw() {
+cpw() { # Función para copiar archivos del sistema de archivos de Windows a WSL
     if [ $# -lt 2 ]; then
         echo -e "${ERROR_INCORRECT_USAGE}"
         return 1
@@ -76,17 +74,14 @@ lsdw() {
 
 du-wd() {
     if [ -z "$1" ]; then
-        # Respuesta si en directorio o archivo no se define 
         echo -e "${ERROR_FILE_NOT_SPECIFIED}"
         return 1
-    else
-        # Se proporciona argumento, usa el directorio especificado
-        local dir="/mnt/c/Users/$windows_username/$1"
+    else  
+        local dir="/mnt/c/Users/$windows_username/$1" 
     fi
 
-    # Verifica si el directorio existe antes de ejecutar `du`
-    if [ -d "$dir" ]; then
-        du -sh "$dir" # Mide y muestra el tamaño del directorio
+    if [ -d "$dir" ]; then  # Verifica si el directorio existe antes de ejecutar `du`
+        du -sh "$dir" 
     else
         echo -e "${ERROR_COLOR}Error: El directorio '$dir' no existe.${RESET}"
     fi
