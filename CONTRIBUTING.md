@@ -50,4 +50,6 @@ Añadimos los cambios realizados.
 
 ![Pull Request Referens](https://i.ytimg.com/vi/rgbCcBNZcdQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXFEKoemV249J8Dya6ap35q-qrEg)
 
-### 🐛 Si eres nuevo en el proyecto, busca issues con la etiqueta [**good first issue**](https://goodfirstissue.dev/). Estas tareas son ideales para comenzar a contribuir!
+> .[!important].
+
+> 🐛 Si eres nuevo en el proyecto, busca issues con la etiqueta [**good first issue**](https://goodfirstissue.dev/). Estas tareas son ideales para comenzar a contribuir!
