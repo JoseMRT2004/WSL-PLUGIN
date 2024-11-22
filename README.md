@@ -71,7 +71,7 @@ Este proyecto busca simplificar las operaciones entre el Subsistema de Windows p
 
 ¿Tienes ideas geniales o encontraste un error? ¡Tu ayuda es bienvenida!  
 - Abre un **issue** para reportar problemas.  
-- Envía un **pull request** si deseas agregar una función.  
+- Envía un **pull request** si deseas agregar una función aquí en [‼️CONTRIBUTING.md](https://github.com/JoseMRT2004/WSL-PLUGIN/blob/main/README.md) tienes más información .  
 
 ## ⚠️ **Notas Finales**  
 
