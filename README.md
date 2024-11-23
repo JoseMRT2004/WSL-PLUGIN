@@ -23,7 +23,7 @@ Este proyecto busca simplificar las operaciones entre el Subsistema de Windows p
 
 ## 🛠️ **Requisitos**  
 
-- ✅ **Sistema Operativo**: Windows 11 Home (probado y funcionando en este entorno).  
+- ✅ **Sistema Operativo**: Windows 11 Home  _"Está siendo probado en este entorno."_  
 - ⚙️ **WSL**: Compatible con **WSL 1 y WSL 2**.  
 - 🐍 **Lenguajes de Desarrollo**:  
   - **Bash** para scripts principales.  
